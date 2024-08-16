@@ -1,3 +1,5 @@
+const appId = "-fafvhitsjq-uc.a.run.app";
+
 document.addEventListener("DOMContentLoaded", () => {
   if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
     alert(
@@ -181,19 +183,16 @@ function handleSubmit(event) {
 }
 
 function saveContractNumber(value) {
-  fetch(
-    "http://127.0.0.1:5001/docgen-a9fb2/us-central1/updateContractNumber?number=" +
-      value
-  ).then((response) => console.log(response.status));
+  fetch(`https://updatecontractnumber${appId}?number=${value}`).then(
+    (response) => console.log(response.status)
+  );
   localStorage.setItem("lastContractNumber", value);
 }
 
 async function loadLastContractNumber() {
   try {
     const localLastNum = localStorage.getItem("lastContractNumber") || "";
-    const response = await fetch(
-      "http://127.0.0.1:5001/docgen-a9fb2/us-central1/getContractNumber"
-    );
+    const response = await fetch(`https://getcontractnumber${appId}`);
     const data = await response.json();
 
     if (data.lastNumber) {
