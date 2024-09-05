@@ -1,37 +1,37 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
 }
 
 form {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
 label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
 }
 
 input[type="text"],
@@ -40,30 +40,30 @@ input[type="date"],
 input[type="number"],
 textarea,
 select {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1.25rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 select:focus,
@@ -72,178 +72,182 @@ input[type="file"]:focus,
 input[type="date"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-    outline: none;
-    border-color: #4CAF50;
+  outline: none;
+  border-color: #4caf50;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    width: 100%;
-    font-size: 1.1rem;
-    font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
+  background-color: #45a049;
+  transform: translateY(-2px);
 }
 
 input[type="submit"]:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .inputBlock {
-    width: 100%;
-    margin-bottom: 1.25rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
 }
 
 .fopBlock {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .fopBlock select {
-    flex-grow: 1;
-    margin-right: 10px;
-    margin-bottom: 0;
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 
 #addFopBtn {
-    padding: 0.75rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    font-size: 19px;
-    border-radius: 6px;
-    cursor: pointer;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 19px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 #popupContainer {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 .show-popup {
-    display: block !important;
+  display: block !important;
 }
 
 #popupContainer > div {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #newFopName {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 #saveNewFop,
 #closePopup {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 #saveNewFop {
-    background-color: #4CAF50;
-    color: white;
-    margin-right: 10px;
+  background-color: #4caf50;
+  color: white;
+  margin-right: 10px;
 }
 
 #closePopup {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 
 @media (max-width: 480px) {
-    form {
-        padding: 1.5rem;
-    }
+  form {
+    padding: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
-    form {
-        max-width: 900px;
-        padding: 2.5rem;
-    }
+  form {
+    max-width: 900px;
+    padding: 2.5rem;
+  }
 
-    .inputBlock {
-        width: 48%;
-    }
+  .inputBlock {
+    width: 48%;
+  }
 
-    .inputBlock:nth-child(1),
-    .inputBlock:nth-child(2),
-    .inputBlock:last-child,
-    .inputBlock:has(textarea) {
-        width: 100%;
-    }
+  .inputBlock.short1 {
+    width: 35% !important;
+  }
+
+  .inputBlock:nth-child(1),
+  .inputBlock:nth-child(2),
+  .inputBlock:last-child,
+  .inputBlock:has(textarea) {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
-    form {
-        max-width: 1200px;
-        padding: 3rem;
-    }
+  form {
+    max-width: 1200px;
+    padding: 3rem;
+  }
 
-    .inputBlock {
-        width: 32%;
-    }
+  .inputBlock {
+    width: 32%;
+  }
 
-    .inputBlock:nth-child(1),
-    .inputBlock:nth-child(2),
-    .inputBlock:has(textarea),
-    .inputBlock:has(#accountNumber),
-    .inputBlock:has(#establishmentName) {
-        width: 48%;
-    }
+  .inputBlock:nth-child(1),
+  .inputBlock:nth-child(2),
+  .inputBlock:has(textarea),
+  .inputBlock:has(#accountNumber),
+  .inputBlock:has(#establishmentName) {
+    width: 48%;
+  }
 
-    .inputBlock:has(.fopBlock) {
-        align-self: center;
-        margin-bottom: 0;
-    }
+  .inputBlock:has(.fopBlock) {
+    align-self: center;
+    margin-bottom: 0;
+  }
 
-    .inputBlock:last-child {
-        width: 100%;
-        margin-top: 1rem;
-    }
+  .inputBlock:last-child {
+    width: 100%;
+    margin-top: 1rem;
+  }
 
-    .short {
-        width: 20%;
-    }
+  .short {
+    width: 20%;
+  }
 
-    .short:has(#sex) {
-        width: 100px;
-    }
+  .short:has(#sex) {
+    width: 100px;
+  }
 
-    .short:has(#registrationDate) {
-        width: 150px;
-    }
+  .short:has(#registrationDate) {
+    width: 150px;
+  }
 }
 
 .invalid-iban {
-    border-color: red !important;
-    border-width: 2px !important;
+  border-color: red !important;
+  border-width: 2px !important;
 }
