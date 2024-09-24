@@ -315,7 +315,7 @@ function getLocation(location) {
 
 function validateFormData(formData) {
   for (const [key, value] of Object.entries(formData)) {
-    if (!value) {
+    if (!value && key !== "establishmentAddress") {
       alert(`Пожалуйста, заполните поле ${key}.`);
       return false;
     }
@@ -392,11 +392,11 @@ async function patchDocxInBrowser(templateFile, formData) {
 }
 
 function makeAddress(address) {
-    if (address != "") {
-      return ", що знаходиться за адресою: м. Одеса, " + address;
-    } else {
-      return "";
-    }
+  if (address != "") {
+    return ", що знаходиться за адресою: м. Одеса, " + address;
+  } else {
+    return "";
+  }
 }
 
 function createDocName(formData, fopLastName) {
