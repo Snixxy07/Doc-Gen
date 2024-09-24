@@ -359,12 +359,15 @@ async function patchDocxInBrowser(templateFile, formData) {
 
     const fopLastName = formData.fop.split(" ")[0];
 
+    const modifiedAddress = makeAddress(formData.establishmentAddress);
+
     const patches = createPatches(
       formData,
       formattedContractDate,
       formattedEndContractDate,
       bankName,
-      fopLastName
+      fopLastName,
+      modifiedAddress
     );
 
     const patchedDoc = await docx.patchDocument(templateFile, {
@@ -388,6 +391,14 @@ async function patchDocxInBrowser(templateFile, formData) {
   }
 }
 
+function makeAddress(address) {
+    if (address != "") {
+      return ", що знаходиться за адресою: м. Одеса, " + address;
+    } else {
+      return "";
+    }
+}
+
 function createDocName(formData, fopLastName) {
   var location = "";
   if (formData.location != "empty") {
@@ -401,7 +412,8 @@ function createPatches(
   formattedContractDate,
   formattedEndContractDate,
   bankName,
-  fopLastName
+  fopLastName,
+  modifiedAddress
 ) {
   return {
     fop: createParagraphPatch(formData.fop),
@@ -416,7 +428,7 @@ function createPatches(
     accountNumber: createParagraphPatch(formData.accountNumber),
     bank: createParagraphPatch(bankName),
     restName: createParagraphPatch(formData.establishmentName),
-    restAddress: createParagraphPatch(formData.establishmentAddress),
+    restAddress: createParagraphPatch(modifiedAddress),
     comission: createParagraphPatch(formData.comission),
     ourFop: createParagraphPatch(formData.ourFop),
     sex: createParagraphPatch(proceedSex(formData.sex)),
